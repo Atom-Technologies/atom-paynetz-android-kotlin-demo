@@ -2,7 +2,7 @@
 
 This is the integration guide to Atom Paynetz Payment Gateway to your application.
 
-##### Step 1. Go to [documentaions](https://github.com/Atom-Technologies/atom-paynetz-android-kotlin-demo/tree/master/documentations "documentaions")
+##### Step 1. Go to [documentaions folder](https://github.com/Atom-Technologies/atom-paynetz-android-kotlin-demo/tree/master/documentations "documentaions")
 ##### 
 ##### Step 2: You will find [Atom Paynetz Library](https://github.com/Atom-Technologies/atom-paynetz-android-kotlin-demo/blob/master/documentations/mpsdklibrary-release.aar "Atom Paynetz Library") which you have to include in your project.
 
