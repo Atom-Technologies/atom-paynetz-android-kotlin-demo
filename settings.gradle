@@ -1,0 +1,2 @@
+include ':app', ':mpsdklibrary-release'
+rootProject.name='AtomPaynetzKotlinTest'

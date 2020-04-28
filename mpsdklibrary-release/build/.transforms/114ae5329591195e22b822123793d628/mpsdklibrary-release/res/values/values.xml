@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="myWindowBackground">#DFDFDF</color>
+    <color name="selected_gray">#373737</color>
+    <string name="Rs">\u20B9</string>
+    <string name="app_name">MobilePaymentSDK</string>
+    <string name="sp_month_sel">Select Month</string>
+    <string name="sp_year_sel">Select Year</string>
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+</resources>

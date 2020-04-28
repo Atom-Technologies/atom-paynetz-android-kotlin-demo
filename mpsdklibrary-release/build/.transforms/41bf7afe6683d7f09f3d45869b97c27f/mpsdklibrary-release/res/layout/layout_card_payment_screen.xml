@@ -1,0 +1,212 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF">
+
+    <RelativeLayout
+        android:id="@+id/paymentDetailsBoard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:padding="5dip"
+        android:layout_marginTop="1dip"
+        android:layout_marginBottom="1dip">
+
+            <TextView
+                android:id="@+id/RupeeSign"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Rs"
+                android:layout_centerVertical="true"
+                android:textSize="40dip"
+                android:paddingRight="5dip"
+                android:textColor="@color/selected_gray"/>
+
+            <TextView
+                android:id="@+id/payAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="30dip"
+                android:text=""
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/RupeeSign"/>
+
+            <ImageView
+                android:id="@+id/img_lib_atomlogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/paymentDetailsBoard"
+        android:background="@color/myWindowBackground"
+        >
+           
+        <TextView
+            android:id="@+id/tv_Card_Details_Label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Card Details"
+            android:textSize="15dip"
+            android:layout_margin="25dip"
+            android:textColor="@color/selected_gray"
+            android:layout_centerInParent="true"
+            />
+        
+         <ImageView
+             	android:id="@+id/img_cardType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dip"
+                android:layout_margin="5dip"
+                android:layout_toLeftOf="@+id/tv_Card_Details_Label"
+                android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout android:id="@+id/rl_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_header"
+        android:layout_above="@+id/llSubmitCardDetails"
+        android:layout_gravity="center">
+        
+        <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dip">
+
+	                <EditText
+	                    android:id="@+id/et_Card_No"
+	                    android:layout_width="match_parent"
+	                    android:layout_height="wrap_content"
+	                    android:inputType="phone"
+	                    android:hint="Card Number"
+	                    android:maxLength="23"
+	                    android:padding="10dip"
+	                    android:ems="10"
+	                    android:layout_alignParentTop="true" />
+	
+	                <EditText
+	                    android:id="@+id/et_Card_Name"
+	                    android:layout_width="match_parent"
+	                    android:layout_height="wrap_content"
+	                    android:inputType="textPersonName"
+	                    android:hint="Card Name"
+	                    android:maxLength="45"
+	                    android:digits="A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z"
+	                    android:padding="10dip"
+	                    android:ems="10"
+	                    android:layout_below="@id/et_Card_No"
+	                    android:layout_centerHorizontal="true" />
+	                
+	                <LinearLayout
+	                    android:id="@+id/llexpiry" 
+	                    android:layout_width="match_parent"
+	                    android:layout_height="wrap_content"
+	                    android:layout_below="@id/et_Card_Name"
+	                    android:weightSum="1"
+	                    android:orientation="horizontal">
+	
+	                    
+	                    <LinearLayout
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_weight="0.5"
+	                    android:orientation="horizontal">
+			                <TextView
+			                    android:id="@+id/tt_spMonth"
+			                    android:layout_width="wrap_content"
+			                    android:layout_height="wrap_content"
+			                    android:textAppearance="?android:attr/textAppearanceSmall"
+			                    android:text="Expiry Month"
+			                    android:paddingTop="20dip"
+			                    android:paddingLeft="10dip"
+			                    />
+			
+			                <Spinner
+			                    android:id="@+id/sp_Exp_Month"
+							    android:drawSelectorOnTop="true"					    
+							    android:layout_width="match_parent"
+							    android:layout_height="wrap_content"
+							    android:prompt="@string/sp_month_sel"
+							    android:textAlignment="center"
+							    android:padding="10dip">
+							</Spinner>
+					    </LinearLayout>
+						<LinearLayout
+	                    android:layout_width="wrap_content"
+	                    android:layout_height="wrap_content"
+	                    android:layout_weight="0.5"
+	                    android:orientation="horizontal">
+			                <TextView
+			                    android:id="@+id/tt_spYear"
+			                    android:layout_width="wrap_content"
+			                    android:layout_height="wrap_content"
+			                    android:textAppearance="?android:attr/textAppearanceSmall"
+			                    android:text="Year"
+			                    android:paddingTop="20dip"
+			                    android:paddingLeft="10dip"/>
+			
+			               
+			                <Spinner
+			                    android:id="@+id/sp_Exp_Year"
+							    android:drawSelectorOnTop="true"					    
+							    android:layout_width="match_parent"
+							    android:layout_height="wrap_content"
+							    android:prompt="@string/sp_year_sel"
+							    android:textAlignment="center"
+							    android:padding="10dip"
+			                    >
+							</Spinner>
+						</LinearLayout>
+					</LinearLayout>
+	                <EditText
+	                    android:id="@+id/et_CVV"
+	                    android:layout_width="fill_parent"
+	                    android:layout_height="wrap_content"
+	                    android:hint="CVV"
+	                    android:inputType="numberPassword"
+	                    android:maxLength="3"
+	                    android:layout_below="@+id/llexpiry"
+	                    android:layout_centerHorizontal="true"
+	                    android:padding="10dip"
+	                    />
+                </RelativeLayout>
+            </ScrollView>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llSubmitCardDetails"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/btn_CardPayment_Now"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Pay Now" />
+
+        <Button
+            android:id="@+id/btn_CardPayment_Cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_weight="1"
+            android:text="Cancel" />
+    </LinearLayout>
+</RelativeLayout>
