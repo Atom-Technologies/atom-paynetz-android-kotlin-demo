@@ -34,7 +34,7 @@ After this you can head forward to start writing your code.
 
     
     val newPayIntent= Intent(this, PayActivity:: class.java);
-    newPayIntent.putExtra("isLive", false);//true for Live newPayIntent.putExtra("merchantId", "197");//1191
+    newPayIntent.putExtra("isLive", false);//true for Live 
     newPayIntent.putExtra("txnscamt", "0"); //Fixed. Must be �0�
     newPayIntent.putExtra("loginid","197" );
     newPayIntent.putExtra("password", "Test@123");//NCA@1234
